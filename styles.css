@@ -36,10 +36,28 @@ body{
 
 .top{
   display:flex;
-  gap:16px;
-  align-items:flex-start;
   justify-content:space-between;
-  margin-bottom:14px;
+  align-items:center;
+}
+
+.top-actions{
+  display:flex;
+  gap:8px;
+}
+
+.ghost{
+  background:transparent;
+  border:1px solid #3b82f6;
+  color:#3b82f6;
+  padding:6px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.ghost:hover{
+  background:#3b82f6;
+  color:#fff;
 }
 
 .brand h1{
@@ -244,4 +262,29 @@ button:disabled{
   font-size:12px;
   text-align:center;
   opacity:0.9;
+}
+
+.pill-group{
+  display:flex;
+  gap:8px;
+}
+
+.pill-btn{
+  background:#1f2a52;
+  color:#cdd3ee;
+  border:none;
+  padding:6px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.pill-btn.active{
+  background:#3b82f6;
+  color:#fff;
+  font-weight:600;
+}
+
+.pill-btn:hover{
+  opacity:0.85;
 }
