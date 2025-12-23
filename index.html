@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML 전날 복습 퀴즈 (즉시 피드백)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <h1>HTML 전날 수업 복습</h1>
+        <p>1문제씩 · 선택 즉시 정답/해설 · 셔플 가능</p>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="btnShuffle">셔플</button>
+        <button type="button" id="btnRestart">처음부터</button>
+      </div>
+    </header>
+
+    <section class="status card">
+      <div class="row">
+        <div class="pill">과목: <b id="subjectText">HTML</b></div>
+        <div class="pill">진행: <b id="progressText">0/0</b></div>
+        <div class="pill">정답: <b id="correctText">0</b></div>
+        <div class="pill">오답: <b id="wrongText">0</b></div>
+      </div>
+
+      <div class="bar">
+        <div class="barFill" id="barFill" style="width:0%;"></div>
+      </div>
+    </section>
+
+    <main class="card" id="quizCard" aria-live="polite">
+      <div class="qHead">
+        <div class="qMeta">
+          <span class="tag" id="topicText">-</span>
+          <span class="qid" id="qidText">-</span>
+        </div>
+        <h2 class="qTitle" id="questionText">문제를 불러오는 중...</h2>
+        <p class="qDesc" id="descText"></p>
+      </div>
+
+      <div class="choices" id="choicesArea"></div>
+
+      <div class="feedback" id="feedbackArea" style="display:none;">
+        <div class="judge" id="judgeText"></div>
+        <div class="explain" id="explainText"></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" id="btnPrev">이전</button>
+        <button type="button" class="primary" id="btnNext">다음</button>
+      </div>
+    </main>
+
+    <section class="card" id="endCard" style="display:none;">
+      <h2 class="endTitle">복습 완료</h2>
+      <p class="endDesc" id="endSummary"></p>
+      <div class="endBtns">
+        <button type="button" id="btnRestart2">처음부터</button>
+        <button type="button" class="primary" id="btnShuffle2">셔플로 다시</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>Tip: 즉시 피드백은 전날 복습에 최적. 틀린 개념은 바로 교정하세요.</p>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
