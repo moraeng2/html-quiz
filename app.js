@@ -43,9 +43,10 @@ for(var i=0;i<dayButtons.length;i++){
 }
 
 document.getElementById("btnShuffle").onclick = function(){
-  shuffle(state.order);
-  state.index = 0;
-  render();
+  // shuffle(state.order);
+  // state.index = 0;
+  // render();
+  restart(true)
 };
 
 document.getElementById("btnReset").onclick = function(){
@@ -111,8 +112,12 @@ function render() {
 }
 
 function choose(e) {
+  var qIndex = state.order[state.index];
+  var q = state.questions[qIndex];
+
+  if (state.answered[q.id]) return;
+
   var idx = Number(e.target.dataset.idx);
-  var q = state.questions[state.order[state.index]];
 
   if (idx === q.answerIndex) {
     e.target.classList.add("correct");
@@ -124,14 +129,19 @@ function choose(e) {
     judgeText.textContent = "오답";
   }
 
+  state.answered[q.id] = true;
+
   explainText.textContent = q.explanation;
   feedbackArea.style.display = "block";
 
   var btns = document.querySelectorAll(".choiceBtn");
-  for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].disabled = true;
+  }
 
   updateStatus();
 }
+
 
 function updateStatus() {
   var total = state.order.length;
@@ -159,10 +169,12 @@ function restart(shuffleOn) {
   state.index = 0;
   state.correct = 0;
   state.wrong = 0;
+  state.answered = {}; // ★ 필수
   buildOrder();
   if (shuffleOn) shuffle(state.order);
   render();
 }
+
 
 fetch(DATA_URL)
   .then((r) => r.json())
