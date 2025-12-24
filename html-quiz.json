@@ -464,6 +464,221 @@
       "choices": ["<legend>", "<section>", "<group>", "<fieldset>"],
       "answerIndex": 3,
       "explanation": "<fieldset>은 폼 요소를 그룹으로 묶습니다. <legend>는 그 그룹의 제목을 표시합니다."
+    },
+    {
+      "id": "HTML-041",
+      "day": 3,
+      "topic": "form 태그",
+      "prompt": "사용자로부터 입력값을 받아 서버로 전송하기 위한 기본 컨테이너 태그는?",
+      "desc": "입력 요소를 감싸는 태그",
+      "choices": ["<input>", "<fieldset>", "<form>", "<div>"],
+      "answerIndex": 2,
+      "explanation": "<form> 태그는 사용자 입력을 서버로 전송하기 위한 컨테이너 역할을 합니다."
+    },
+    {
+      "id": "HTML-042",
+      "day": 3,
+      "topic": "form 태그",
+      "prompt": "form 태그에서 전송 방식을 지정하는 속성은?",
+      "desc": "GET/POST 구분",
+      "choices": ["type", "action", "method", "name"],
+      "answerIndex": 2,
+      "explanation": "method 속성으로 GET 또는 POST 전송 방식을 지정합니다."
+    },
+    {
+      "id": "HTML-043",
+      "day": 3,
+      "topic": "fieldset / legend",
+      "prompt": "여러 입력 요소를 하나의 그룹으로 묶을 때 사용하는 태그는?",
+      "desc": "폼 그룹화",
+      "choices": ["<div>", "<group>", "<fieldset>", "<form>"],
+      "answerIndex": 2,
+      "explanation": "<fieldset>은 관련된 입력 요소를 하나의 그룹으로 묶습니다."
+    },
+    {
+      "id": "HTML-044",
+      "day": 3,
+      "topic": "fieldset / legend",
+      "prompt": "fieldset으로 묶인 그룹의 제목을 표시하는 태그는?",
+      "desc": "그룹 제목",
+      "choices": ["<caption>", "<title>", "<label>", "<legend>"],
+      "answerIndex": 3,
+      "explanation": "<legend>는 fieldset 그룹의 제목을 나타냅니다."
+    },
+    {
+      "id": "HTML-045",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "사용자가 일반 텍스트를 입력할 때 사용하는 input type은?",
+      "desc": "기본 입력",
+      "choices": ["password", "text", "email", "number"],
+      "answerIndex": 1,
+      "explanation": "type=\"text\"는 일반 문자열 입력에 사용됩니다."
+    },
+    {
+      "id": "HTML-046",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "입력값이 화면에 표시되지 않도록 가려주는 input type은?",
+      "desc": "비밀번호 입력",
+      "choices": ["hidden", "text", "password", "secure"],
+      "answerIndex": 2,
+      "explanation": "type=\"password\"는 입력 내용을 화면에 표시하지 않습니다."
+    },
+    {
+      "id": "HTML-047",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "폼 데이터를 서버로 전송하는 버튼 역할의 input type은?",
+      "desc": "전송 버튼",
+      "choices": ["button", "reset", "submit", "send"],
+      "answerIndex": 2,
+      "explanation": "type=\"submit\"은 form 데이터를 서버로 전송합니다."
+    },
+    {
+      "id": "HTML-048",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "숫자만 입력하도록 제한하는 input type은?",
+      "desc": "숫자 입력",
+      "choices": ["text", "range", "number", "tel"],
+      "answerIndex": 2,
+      "explanation": "type=\"number\"는 숫자 입력에 특화되어 있습니다."
+    },
+    {
+      "id": "HTML-049",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "이메일 형식 입력을 브라우저가 검사하도록 돕는 input type은?",
+      "desc": "이메일 입력",
+      "choices": ["text", "email", "mail", "address"],
+      "answerIndex": 1,
+      "explanation": "type=\"email\"은 이메일 형식 유효성 검사를 제공합니다."
+    },
+    {
+      "id": "HTML-050",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "여러 항목 중 하나만 선택하도록 할 때 사용하는 input type은?",
+      "desc": "단일 선택",
+      "choices": ["checkbox", "radio", "select", "option"],
+      "answerIndex": 1,
+      "explanation": "radio 버튼은 여러 항목 중 하나만 선택할 수 있습니다."
+    },
+    {
+      "id": "HTML-051",
+      "day": 3,
+      "topic": "input 태그",
+      "prompt": "여러 항목을 동시에 선택할 수 있는 input type은?",
+      "desc": "복수 선택",
+      "choices": ["radio", "select", "checkbox", "multiple"],
+      "answerIndex": 2,
+      "explanation": "checkbox는 여러 항목을 동시에 선택할 수 있습니다."
+    },
+    {
+      "id": "HTML-052",
+      "day": 3,
+      "topic": "select 태그",
+      "prompt": "드롭다운 목록을 만들기 위한 기본 태그는?",
+      "desc": "선택 목록",
+      "choices": ["<option>", "<datalist>", "<select>", "<list>"],
+      "answerIndex": 2,
+      "explanation": "<select> 태그는 드롭다운 선택 목록을 생성합니다."
+    },
+    {
+      "id": "HTML-053",
+      "day": 3,
+      "topic": "select 태그",
+      "prompt": "select 태그 안에서 실제 선택 항목을 정의하는 태그는?",
+      "desc": "목록 항목",
+      "choices": ["<optgroup>", "<item>", "<choice>", "<option>"],
+      "answerIndex": 3,
+      "explanation": "<option>은 select 안의 실제 선택 항목입니다."
+    },
+    {
+      "id": "HTML-054",
+      "day": 3,
+      "topic": "optgroup 태그",
+      "prompt": "select 태그 안에서 항목들을 그룹으로 묶기 위해 사용하는 태그는?",
+      "desc": "옵션 그룹",
+      "choices": ["<group>", "<fieldset>", "<optgroup>", "<option>"],
+      "answerIndex": 2,
+      "explanation": "<optgroup>은 option들을 그룹화할 때 사용합니다."
+    },
+    {
+      "id": "HTML-055",
+      "day": 3,
+      "topic": "datalist 태그",
+      "prompt": "입력 중 자동완성 목록을 제공하기 위해 사용하는 태그는?",
+      "desc": "추천 목록",
+      "choices": ["<select>", "<list>", "<datalist>", "<autocomplete>"],
+      "answerIndex": 2,
+      "explanation": "<datalist>는 input과 함께 사용되어 자동완성 목록을 제공합니다."
+    },
+    {
+      "id": "HTML-056",
+      "day": 3,
+      "topic": "textarea 태그",
+      "prompt": "여러 줄의 텍스트를 입력받기 위해 사용하는 태그는?",
+      "desc": "장문 입력",
+      "choices": ["<input>", "<text>", "<textarea>", "<multiline>"],
+      "answerIndex": 2,
+      "explanation": "<textarea>는 여러 줄의 텍스트 입력을 받을 수 있습니다."
+    },
+    {
+      "id": "HTML-057",
+      "day": 3,
+      "topic": "button 태그",
+      "prompt": "button 태그를 사용했을 때의 장점으로 가장 알맞은 것은?",
+      "desc": "button vs input",
+      "choices": [
+        "텍스트만 넣을 수 있다",
+        "폼 전송만 가능하다",
+        "이미지나 HTML 구조를 내부에 넣을 수 있다",
+        "항상 submit으로 동작한다"
+      ],
+      "answerIndex": 2,
+      "explanation": "<button>은 내부에 텍스트뿐 아니라 아이콘, HTML 구조도 포함할 수 있습니다."
+    },
+    {
+      "id": "HTML-058",
+      "day": 3,
+      "topic": "div / span",
+      "prompt": "다음 중 블록 레벨 요소(block-level element)는?",
+      "desc": "block vs inline",
+      "choices": ["<span>", "<a>", "<strong>", "<div>"],
+      "answerIndex": 3,
+      "explanation": "<div>는 대표적인 블록 레벨 요소로 한 줄을 차지합니다."
+    },
+    {
+      "id": "HTML-059",
+      "day": 3,
+      "topic": "div / span",
+      "prompt": "인라인 레벨 요소의 특징으로 가장 알맞은 것은?",
+      "desc": "inline 특징",
+      "choices": [
+        "항상 줄바꿈이 발생한다",
+        "width와 height를 기본적으로 적용할 수 있다",
+        "내용만큼의 공간만 차지한다",
+        "레이아웃 분할에 주로 사용된다"
+      ],
+      "answerIndex": 2,
+      "explanation": "인라인 요소는 자신의 내용만큼의 공간만 차지하며 줄바꿈이 발생하지 않습니다."
+    },
+    {
+      "id": "HTML-060",
+      "day": 3,
+      "topic": "block / inline 비교",
+      "prompt": "div와 span의 차이에 대한 설명으로 가장 올바른 것은?",
+      "desc": "개념 비교",
+      "choices": [
+        "div는 인라인, span은 블록이다",
+        "div와 span은 기능이 완전히 같다",
+        "div는 레이아웃 분할, span은 텍스트 일부에 사용된다",
+        "span은 항상 줄바꿈을 만든다"
+      ],
+      "answerIndex": 2,
+      "explanation": "div는 블록 레벨 요소로 레이아웃 분할에, span은 인라인 요소로 텍스트 일부에 사용됩니다."
     }
   ]
 }
