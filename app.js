@@ -27,13 +27,13 @@ var barFill = document.getElementById("barFill");
 document.getElementById("btnNext").onclick = next;
 document.getElementById("btnPrev").onclick = prev;
 
-for(var i=0;i<dayButtons.length;i++){
-  dayButtons[i].onclick = function(){
+for (var i = 0; i < dayButtons.length; i++) {
+  dayButtons[i].onclick = function () {
     var selectedDay = this.getAttribute("data-day");
     state.filterDay = selectedDay;
 
     // active 처리
-    for(var j=0;j<dayButtons.length;j++){
+    for (var j = 0; j < dayButtons.length; j++) {
       dayButtons[j].classList.remove("active");
     }
     this.classList.add("active");
@@ -42,28 +42,26 @@ for(var i=0;i<dayButtons.length;i++){
   };
 }
 
-document.getElementById("btnShuffle").onclick = function(){
+document.getElementById("btnShuffle").onclick = function () {
   // shuffle(state.order);
   // state.index = 0;
   // render();
-  restart(true)
+  restart(true);
 };
 
-document.getElementById("btnReset").onclick = function(){
+document.getElementById("btnReset").onclick = function () {
   state.filterDay = "all";
 
   // Day 버튼 active 초기화
-  for(var i=0;i<dayButtons.length;i++){
+  for (var i = 0; i < dayButtons.length; i++) {
     dayButtons[i].classList.remove("active");
-    if(dayButtons[i].getAttribute("data-day")==="all"){
+    if (dayButtons[i].getAttribute("data-day") === "all") {
       dayButtons[i].classList.add("active");
     }
   }
 
   restart(false); // 순서대로
 };
-
-
 
 function shuffle(arr) {
   for (var i = arr.length - 1; i > 0; i--) {
@@ -125,6 +123,10 @@ function choose(e) {
     judgeText.textContent = "정답";
   } else {
     e.target.classList.add("wrong");
+
+    var btns = document.querySelectorAll(".choiceBtn");
+    btns[q.answerIndex].classList.add("correct");
+    
     state.wrong++;
     judgeText.textContent = "오답";
   }
@@ -141,7 +143,6 @@ function choose(e) {
 
   updateStatus();
 }
-
 
 function updateStatus() {
   var total = state.order.length;
@@ -175,11 +176,9 @@ function restart(shuffleOn) {
   render();
 }
 
-
 fetch(DATA_URL)
   .then((r) => r.json())
   .then((d) => {
     state.questions = d.questions;
     restart(false);
   });
-
