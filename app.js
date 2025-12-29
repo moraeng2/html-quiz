@@ -92,7 +92,7 @@ function render() {
     topicText.textContent = "Day " + q.day;
   }
   questionText.textContent = q.prompt;
-  descText.textContent = q.desc || "";
+  // descText.textContent = q.desc || "";
 
   choicesArea.innerHTML = "";
   feedbackArea.style.display = "none";
